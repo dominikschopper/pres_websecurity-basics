@@ -1,7 +1,7 @@
 {
   "name": "secure-dev-basics-training",
   "version": "1.0.0",
-  "description": "Secure Development Basics – Input slides (OWASP Top 10, Vulnerability Classification, AI & Security)",
+  "description": "Secure Development Basics – Slides about OWASP Top 10, Vulnerability Classification, AI & Security",
   "private": true,
   "scripts": {
     "start": "pnpm dlx serve -l 8765 ."

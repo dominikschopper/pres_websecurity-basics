@@ -2,7 +2,7 @@ name: Deploy slides to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -21,15 +21,15 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
         with:
           version: 10
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: 22
+          node-version: 24
           cache: pnpm
 
       - run: pnpm install
@@ -37,14 +37,14 @@ jobs:
       # Assemble only what the browser needs; paths stay identical to local use.
       - name: Assemble site
         run: |
-          mkdir -p _site/node_modules/reveal.js
+          mkdir -p _site/node_modules/reveal.js/dist
           cp *.html _site/
-          cp -r css slides _site/
-          cp -r node_modules/reveal.js/dist node_modules/reveal.js/plugin _site/node_modules/reveal.js/
+          cp -r css slides js plugin assets _site/
+          cp -r node_modules/reveal.js/dist/* _site/node_modules/reveal.js/dist/
 
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
