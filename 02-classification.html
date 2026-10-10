@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classifying Vulnerabilities</title>
+
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css">
+  <link rel="stylesheet" href="css/cofinpro.css">
+  <link rel="stylesheet" href="css/deck.css">
+  <link rel="stylesheet" href="node_modules/reveal.js/plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <section class="title-slide">
+      <h1>Classifying Vulnerabilities</h1>
+      <h2>CVE · CWE · NVD · CVSS</h2>
+      <p>Input 2 · Secure Development Basics</p>
+      <p>Dominik | Cofinpro</p>
+    </section>
+
+    <section data-markdown="slides/02_Classification.md"
+             data-separator="^---$"
+             data-separator-vertical="^--$"
+             data-separator-notes="^Note:">
+    </section>
+
+    <section class="thanks">
+      <h2>Thank you</h2>
+      <p>Next: set up your Juice Shop</p>
+      <p class="small"><a href="index.html">All decks</a></p>
+    </section>
+
+  </div>
+</div>
+
+<script src="node_modules/reveal.js/dist/reveal.js"></script>
+<script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: 'c/t',
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+</script>
+</body>
+</html>

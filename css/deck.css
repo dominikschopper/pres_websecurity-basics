@@ -1,0 +1,18 @@
+/* Small additions on top of the Cofinpro theme: tables, code, exercise slides.
+   Kept separate so cofinpro.css can be replaced 1:1 from the upstream repo. */
+
+.reveal .slides section { text-align: left; }
+.reveal .slides section.trennblatt,
+.reveal .slides section.title-slide,
+.reveal .slides section.thanks { text-align: center; }
+
+.reveal ul, .reveal ol { display: block; }
+.reveal li { margin-bottom: 0.25em; }
+
+.reveal table { font-size: 0.55em; margin: 0.5em auto; }
+.reveal table th, .reveal table td { padding: 0.25em 0.7em; }
+
+.reveal code { font-size: 0.85em; }
+.reveal pre code { max-height: 480px; }
+
+.reveal .small { font-size: 0.65em; opacity: 0.85; }
