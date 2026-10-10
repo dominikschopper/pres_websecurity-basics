@@ -191,8 +191,12 @@
 
         postMessage: true,
 
-        // Dispatches all reveal.js events to the parent window through postMessage
-        postMessageEvents: true,
+        // Dispatches all reveal.js events to the parent window through postMessage.
+        // Left at the default (false): turning this on leaks into the speaker-notes
+        // "upcoming slide" preview iframe too (it shares this page's config), which
+        // then reports its own, 1-slide-ahead position back as real navigation —
+        // causing the presentation to drift forward on its own.
+        postMessageEvents: false,
 
         // Focuses body when page changes visibility to ensure keyboard shortcuts work
         focusBodyOnPageVisibilityChange: true,

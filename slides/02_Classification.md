@@ -1,18 +1,22 @@
 ## Same bug, many names
 
-| Term | Answers | Example |
-|------|---------|---------|
-| **CVE** | Which specific vulnerability? | CVE-2021-44228 |
-| **CWE** | What *kind* of weakness? | CWE-89 SQL Injection |
-| **CVSS** | How severe? | 9.8 – Critical |
-| **NVD** | Where do I look it up? | nvd.nist.gov |
-| **EPSS / KEV** | Is it actually exploited? | cisa.gov KEV catalog |
+| Term | Publisher | Answers | Example |
+|------|-----------|---------|---------|
+| **CVE** | MITRE (US, CISA-funded) | Which specific vulnerability? | CVE-2021-44228 |
+| **CWE** | MITRE (US, CISA-funded) | What *kind* of weakness? | CWE-89 SQL Injection |
+| **CVSS** | FIRST.org (int'l non-profit) | How severe? | 9.8 – Critical |
+| **NVD** | NIST (US Dept of Commerce) | Where do I look it up? | nvd.nist.gov |
+| **EPSS / KEV** | FIRST.org / CISA (US) | Is it actually exploited? | cisa.gov KEV catalog |
+| **EUVD** | ENISA (EU) | Where's the EU alternative? | euvd.enisa.europa.eu |
 
 Note:
-- common language: tools, advisories, teams
 - CVE = instance, CWE = class
-- score ≠ risk (later)
-- the three examples are independent (9.8 is the textbook "all-high" vector)
+- CVE, CWE and NVD are run or funded by US bodies (MITRE operates CVE/CWE under a CISA contract; NIST runs NVD) — not EU institutions
+- 2025 CISA's funding contract with MITRE for CVE nearly lapsed - entirely outside EU control
+- single point of failure + foreign jurisdiction - entirely outside EU control
+- EU response: ENISA stood up the European Vulnerability Database (EUVD) - CVE/NVD remain the de facto default today
+- CVSS/EPSS via FIRST.org are international non-profit governed, which is somewhat better, but FIRST is still US-headquartered and majority-Western-vendor in membership
+- practical takeaway: don't hard-wire tooling/process to a single source; know the EU alternative exists; treat "the CVE database is US infrastructure" as a supply-chain/strategic-dependency risk, not just a trivia fact
 
 ---
 
