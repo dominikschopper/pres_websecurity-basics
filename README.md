@@ -10,6 +10,8 @@ Three Reveal.js decks sharing one project (Markdown slides, speaker notes in key
 
 \*without title and thank-you slide. `index.html` is a landing page linking all three.
 
+see it life on [Github Pages](https://dominikschopper.github.io/pres_websecurity-basics/)
+
 ## Local use
 
 ```bash
