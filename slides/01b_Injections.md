@@ -110,3 +110,59 @@ user searches `wtf<script>alert('cool')</script>` ...
 ```
 
 </div>
+
+---
+
+## IDOR = insecure direct object references
+
+dont do this
+
+```
+https://some.where/api/auftrag/1234/details
+```
+
+```java
+/** backend takes auftragid 1234 and loads from DB */
+```
+
+```sql
+SELECT * FROM auftrag WHERE auftragid = ?;
+```
+
+---
+
+## IDOR = insecure direct object references
+
+dont do this either
+
+```
+https://some.where/api/auftrag/1234/details?userid=7890
+```
+
+```java
+/** backend takes auftragid 1234 and userid = 7890 */
+```
+
+```sql
+SELECT * FROM auftrag WHERE auftragid = ? AND userid = ?;
+```
+
+
+---
+
+## IDOR = insecure direct object references
+
+better like this
+
+```
+https://some.where/api/auftrag/1234/details
+```
+
+```java
+/** backend takes auftragid 1234 and userid from auth token (after validation!) */
+```
+
+```sql
+SELECT * FROM auftrag WHERE auftragid = ? AND userid = ?;
+```
+
