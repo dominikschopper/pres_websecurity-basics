@@ -68,6 +68,12 @@ WHERE
 
 ---
 
+## SQL Injection - what to do?
+
+[SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html#defense-option-3-allow-list-input-validation)
+
+---
+
 ## XSS - how does this work
 
 ```html
@@ -113,6 +119,14 @@ user searches `wtf<script>alert('cool')</script>` ...
 
 ---
 
+## XSS prevention
+
+[Cross Site Scripting CheatSheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
+
+and for fun look at [XSS Filter Evasion](https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html)
+
+---
+
 ## IDOR = insecure direct object references
 
 dont do this
@@ -131,7 +145,7 @@ SELECT * FROM auftrag WHERE auftragid = ?;
 
 ---
 
-## IDOR = insecure direct object references
+## IDOR - no real improvement
 
 dont do this either
 
@@ -150,7 +164,7 @@ SELECT * FROM auftrag WHERE auftragid = ? AND userid = ?;
 
 ---
 
-## IDOR = insecure direct object references
+## IDOR - a better way
 
 better like this
 
@@ -166,3 +180,23 @@ https://some.where/api/auftrag/1234/details
 SELECT * FROM auftrag WHERE auftragid = ? AND userid = ?;
 ```
 
+---
+
+## IDOR - another mitigation
+
+
+```
+https://some.where/api/auftrag/a/details
+```
+
+```java
+/** 
+ * backend takes auftragid a and maps it to the real auftragId 1234
+ * AND takes the userid from auth token (after validation!)
+ * 
+ */
+```
+
+```sql
+SELECT * FROM auftrag WHERE auftragid = ? AND userid = ?;
+```
