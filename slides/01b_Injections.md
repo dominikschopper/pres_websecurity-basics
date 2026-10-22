@@ -53,13 +53,13 @@ WHERE
 <div style="width:45%;display:inline-block">
 
 user enters<br/>
-`uname` = `' /*`<br/>
+`uname` = `' OR 1 = 1 /*`<br/>
 `passwd` = `doesnt matter anymore`
 
 ```sql
 SELECT * FROM `users` 
 WHERE 
-    `username` = '' /*' 
+    `username` = '' OR 1 = 1 /*' 
     AND 
     `password` = 'doesnt matter anymore';
 ```
@@ -90,7 +90,7 @@ WHERE
         const searchTerm = searchfield.value;
         searchfor.innerHTML = `Sie suchten nach "${searchTerm}"!`;
         const response = await fetch(`${searchUrl}?q=${searchTerm}`);
-        resultField.innerHTML = response.text();
+        resultField.innerHTML = await response.text();
     }
 </script>
 ```
@@ -108,11 +108,11 @@ user searches `apple` and submits
 
 <div class="fragment">
 
-user searches `wtf<script>alert('cool')</script>` ...
+user searches `wtf<img src=x onerror=alert('cool') />` ...
 
 ```html
-<input name="search" id="searchfield" value="wtf<script>alert('cool')</script>" />
-<p id="searchfor">Sie suchten nach "wtf<script>alert('cool')</script>"!</p>
+<input name="search" id="searchfield" value="wtf<img src=x onerror=alert('cool') />" />
+<p id="searchfor">Sie suchten nach "wtf<img src=x onerror=alert('cool') />"!</p>
 ```
 
 </div>
@@ -200,3 +200,9 @@ https://some.where/api/auftrag/a/details
 ```sql
 SELECT * FROM auftrag WHERE auftragid = ? AND userid = ?;
 ```
+
+---
+
+## IDOR Prevention
+
+[IDOR CheatSheet](https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html)

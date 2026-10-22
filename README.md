@@ -1,16 +1,17 @@
 # Secure Development Basics – Input slides
 
-Three Reveal.js decks sharing one project (Markdown slides, speaker notes in keywords):
+Four Reveal.js decks sharing one project (Markdown slides, speaker notes in keywords):
 
-| Deck | File | Slides* |
-|------|------|---------|
-| Input 1 – OWASP Top 10 & Cheat Sheets | `01-owasp-top-10.html` + `slides/01_Top10.md` | 14 |
-| Input 2 – Classifying Vulnerabilities (incl. 2 exercise slides) | `02-classification.html` + `slides/02_Classification.md` | 10 |
-| Input 3 – AI and the Security Landscape | `03-ai-and-security.html` + `slides/03_AI.md` | 10 |
+| Deck                                                            | File                                                     | Slides\* |
+|-----------------------------------------------------------------|----------------------------------------------------------|----------|
+| Input 1 – OWASP Top 10 & Cheat Sheets                           | `01-owasp-top-10.html` + `slides/01_Top10.md`            | 14       |
+| Input 1b – Injection Examples                                   | `01b-Injections.html` + `slides/01b_Injections.md`       | 9        |
+| Input 2 – Classifying Vulnerabilities (incl. 2 exercise slides) | `02-classification.html` + `slides/02_Classification.md` | 10       |
+| Input 3 – AI and the Security Landscape                         | `03-ai-and-security.html` + `slides/03_AI.md`            | 10       |
 
-\*without title and thank-you slide. `index.html` is a landing page linking all three.
+\*without title and thank-you slide.
 
-see it life on [Github Pages](https://dominikschopper.github.io/pres_websecurity-basics/)
+`index.html` is a landing page linking all four - see it life on [Github Pages](https://dominikschopper.github.io/pres_websecurity-basics/)
 
 ## Local use
 
@@ -29,7 +30,7 @@ small extras (tables, left-aligned text) live in `css/deck.css`.
 ## GitHub Pages
 
 `.github/workflows/pages.yml` installs reveal.js, assembles the site and deploys it.
-In the repo: *Settings → Pages → Source: GitHub Actions*, then push to `main`.
+In the repo: *Settings → Pages → Source: GitHub Actions*, then push to `master`.
 Commit `pnpm-lock.yaml` (created by `pnpm install`) so builds are reproducible.
 
 ## Sources used for the facts on the slides
