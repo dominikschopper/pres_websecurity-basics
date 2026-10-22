@@ -2,12 +2,12 @@
 
 | Term | Publisher | Answers | Example |
 |------|-----------|---------|---------|
-| **CVE** | MITRE (US, CISA-funded) | Which specific vulnerability? | CVE-2021-44228 |
-| **CWE** | MITRE (US, CISA-funded) | What *kind* of weakness? | CWE-89 SQL Injection |
-| **CVSS** | FIRST.org (int'l non-profit) | How severe? | 9.8 – Critical |
-| **NVD** | NIST (US Dept of Commerce) | Where do I look it up? | nvd.nist.gov |
-| **EPSS / KEV** | FIRST.org / CISA (US) | Is it actually exploited? | cisa.gov KEV catalog |
-| **EUVD** | ENISA (EU) | Where's the EU alternative? | euvd.enisa.europa.eu |
+| **CVE** | MITRE (US, CISA-funded) | Which specific vulnerability? | [CVE-2021-44228](https://www.cve.org/CVERecord?id=CVE-2021-44228) |
+| **CWE** | MITRE (US, CISA-funded) | What *kind* of weakness? | [CWE-89 SQL Injection](https://cwe.mitre.org/data/definitions/89.html) |
+| **CVSS** | FIRST.org (int'l non-profit) | How severe? | [9.8 – Critical](https://nvd.nist.gov/vuln/detail/CVE-2021-44228) |
+| **NVD** | NIST (US Dept of Commerce) | Where do I look it up? | [nvd.nist.gov](https://nvd.nist.gov/) |
+| **EPSS / KEV** | FIRST.org / CISA (US) | Is it actually exploited? | [cisa.gov KEV catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) |
+| **EUVD** | ENISA (EU) | Where's the EU alternative? | [euvd.enisa.europa.eu](https://euvd.enisa.europa.eu/) |
 
 Note:
 - CVE = instance, CWE = class
@@ -27,7 +27,7 @@ Note:
 - IDs assigned by CNAs (vendors, projects, CERTs)
 - Contains: ID, short description, references
 - No severity score of its own
-- cve.org
+- [cve.org](https://www.cve.org/)
 
 Note:
 - ~40,000 new CVEs in H1 2026 (Microsoft Digital Defense Report 2026)
@@ -43,7 +43,7 @@ Note:
 - A CVE is mapped to one or more CWEs
 - Annual **CWE Top 25**
 - OWASP Top 10 category = group of CWEs (A01:2025 alone maps 40)
-- cwe.mitre.org
+- [cwe.mitre.org](https://cwe.mitre.org/)
 
 Note:
 - CWE-79 XSS, CWE-89 SQLi, CWE-22 path traversal
@@ -58,7 +58,7 @@ Note:
 - Run by NIST (US)
 - Takes the CVE and **adds**: CVSS score, CWE mapping, affected products (CPE), references
 - Search by CVE, product, keyword; API available
-- nvd.nist.gov
+- [nvd.nist.gov](https://nvd.nist.gov/)
 
 **Cross-check:** vendor advisory · GitHub Advisory DB · osv.dev
 
