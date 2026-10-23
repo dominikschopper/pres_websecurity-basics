@@ -150,7 +150,7 @@ Note:
 
 ## Exercise 2 – Score it yourself
 
-1. Open the **FIRST CVSS calculator** (first.org/cvss/calculator)
+1. Open the **FIRST CVSS calculator** ([4.0](https://www.first.org/cvss/calculator/4.0) · [3.1](https://www.first.org/cvss/calculator/3.1))
 2. Set the metrics for **your** CVE from the description
 3. Compare with the NVD score – same? why not?
 4. Share in 1 minute: **CVE – CWE – score – category**
