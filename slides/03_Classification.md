@@ -49,7 +49,7 @@ Note:
 - CWE-79 XSS, CWE-89 SQLi, CWE-22 path traversal
 - gets you from "this bug" to "this class of bug"
 - → right Cheat Sheet
-- Veracode AI study reports in CWEs (Input 3)
+- Veracode AI study reports in CWEs (Part 4)
 
 ---
 
@@ -121,7 +121,7 @@ Note:
 Note:
 - critical in a dev-only dependency vs. medium on internet-facing login
 - KEV = fix first
-- exploitation windows shrinking → Input 3
+- exploitation windows shrinking → Part 4
 - patch policy: KEV / exposed first
 
 ---
@@ -165,14 +165,17 @@ Note:
 
 ## Takeaways: a dependency alert lands in your repo
 
-1. Read the **CVE** description
-2. Check the **CWE** – what kind of weakness? → Top 10 → Cheat Sheet
-3. Read the **vector** – can it reach **us**?
-4. Check **KEV / EPSS** – is it exploited?
-5. Decide: upgrade · mitigate · document
+- Read the **CVE** description
+- Check the **CWE**
+    - what kind of weakness?
+    - Top 10 → Cheat Sheet
+- Read the **vector**
+    - can it reach **us**?
+- Check **KEV / EPSS**
+    - is it already exploited?
+- Decide: upgrade | mitigate | document
 
 Note:
 - Dependabot / pnpm audit / Renovate
 - don't panic on score alone, don't ignore
 - define team rule (e.g. KEV = same week)
-- break → set up Juice Shop

@@ -32,7 +32,7 @@ WHERE
 
 </div>
 
----
+--
 
 ## SQL Injection Exploit
 
@@ -66,7 +66,7 @@ WHERE
 
 </div>
 
----
+--
 
 ## SQL Injection - what to do?
 
@@ -95,7 +95,7 @@ WHERE
 </script>
 ```
 
----
+--
 
 ## XSS - happy path + exploit
 
@@ -117,7 +117,7 @@ user searches `wtf<img src=x onerror=alert('cool') />` ...
 
 </div>
 
----
+--
 
 ## XSS prevention
 
@@ -143,7 +143,7 @@ https://some.where/api/auftrag/1234/details
 SELECT * FROM auftrag WHERE auftragid = ?;
 ```
 
----
+--
 
 ## IDOR - no real improvement
 
@@ -162,7 +162,7 @@ SELECT * FROM auftrag WHERE auftragid = ? AND userid = ?;
 ```
 
 
----
+--
 
 ## IDOR - a better way
 
@@ -180,7 +180,7 @@ https://some.where/api/auftrag/1234/details
 SELECT * FROM auftrag WHERE auftragid = ? AND userid = ?;
 ```
 
----
+--
 
 ## IDOR - another mitigation
 
@@ -201,7 +201,7 @@ https://some.where/api/auftrag/a/details
 SELECT * FROM auftrag WHERE auftragid = ? AND userid = ?;
 ```
 
----
+--
 
 ## IDOR Prevention
 

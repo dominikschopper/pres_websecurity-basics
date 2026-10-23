@@ -2,12 +2,12 @@
 
 Four Reveal.js decks sharing one project (Markdown slides, speaker notes in keywords):
 
-| Deck                                                            | File                                                     | Slides\* |
-|-----------------------------------------------------------------|----------------------------------------------------------|----------|
-| Input 1 – OWASP Top 10 & Cheat Sheets                           | `01-owasp-top-10.html` + `slides/01_Top10.md`            | 14       |
-| Input 1b – Injection Examples                                   | `01b-Injections.html` + `slides/01b_Injections.md`       | 9        |
-| Input 2 – Classifying Vulnerabilities (incl. 2 exercise slides) | `02-classification.html` + `slides/02_Classification.md` | 10       |
-| Input 3 – AI and the Security Landscape                         | `03-ai-and-security.html` + `slides/03_AI.md`            | 10       |
+| Deck                                                           | File                                                     | Slides\* |
+|----------------------------------------------------------------|----------------------------------------------------------|----------|
+| Part 1 – OWASP Top 10 & Cheat Sheets                           | `01-owasp-top-10.html` + `slides/01_Top10.md`            | 14       |
+| Part 2 – Injection Examples                                    | `02-injections.html` + `slides/02_Injections.md`         | 9        |
+| Part 3 – Classifying Vulnerabilities (incl. 2 exercise slides) | `03-classification.html` + `slides/03_Classification.md` | 10       |
+| Part 4 – AI and the Security Landscape                         | `04-ai-and-security.html` + `slides/04_AI.md`            | 10       |
 
 \*without title and thank-you slide.
 
